@@ -1,0 +1,391 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: quicksand, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    cursor: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    width: 96vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+main{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: absolute;
+    border: 4px solid rgb(0, 0, 0);
+    pointer-events: none;
+    /* mix-blend-mode: difference; */
+    z-index: 20;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.underline{
+    background: linear-gradient(to top, black 1px,  transparent 2px) no-repeat left bottom / 0 100%;
+    background-size: 100% 0;
+}
+
+.underline:hover{
+    animation: souligner 1.2s both;
+}
+
+.weight{
+    font-weight: 600;
+}
+
+@keyframes souligner {
+    from{
+        background-size: 100% 100%;
+        background-position: bottom right;
+    }
+    50%{
+        background-size: 0 100%;
+        background-position: bottom right;
+    }
+    50.01%{
+        background-position: bottom left;
+    }
+    100%{
+        background-size: 100% 100%;
+    }
+}
+
+
+h3{
+    font-family: azo-sans-uber, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.8vw;
+    margin-bottom: 5%;
+}
+
+p{
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+}
+
+input, label{
+    font-size: 2.5vw;
+    letter-spacing: 0.2vw;
+    line-height: 4vw;
+}
+
+
+#goScroll{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    height: 10vh;
+    z-index: 2;
+}
+
+.iconScroll{
+    width: 3vw;
+    animation: scrollDown 1.3s linear infinite;
+    transition-duration: 1s;    /* Fonctionne pas */
+    box-sizing: content-box;
+    padding: 12px;
+}
+
+.iconScroll:hover{
+    /* transform: translateY(12px) scale(0.6, 1.4); */
+    transform: translateY(12px);
+    animation: none;
+}
+
+@keyframes scrollDown {
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(14px);
+    }
+    70%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.divSectionHaut{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.divSectionHaut > p{
+    width: 40%;
+}
+
+.TxtPortfolio{
+    width: 100%;
+    transform-origin: center;
+    animation: rota 6.5s linear infinite;
+}
+
+.divSectionHaut > div{
+    position: relative;
+    width: 25%;
+}
+
+.divSectionHaut > div > img{
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 50%; 
+    margin-left: 50%; 
+    transform: translateY(-50%) translateX(-50%); 
+    z-index: -1;
+}
+
+.cls-1{
+    fill:#000000;
+}
+
+@keyframes rota{ 
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+.sectionAllContent{
+    height: 100vh;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 700ms ease;
+    z-index: 1;
+}
+
+#sectionPresentation{
+    display: flex;
+    align-items: center;
+    padding: 0 8vw;
+    height: 100vh;
+}
+
+#presentation{
+    text-align: justify;
+}
+
+#sectionAmazingIndoor, #sectionSamaritaine{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sectionAmazingIndoor > img, #sectionSamaritaine > img{
+    width: 48%;
+    border-radius: 1.16vw;
+}
+
+#sectionAmazingIndoor > div, #sectionSamaritaine > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.pExplication{
+    margin-left: 7%;
+    font-size: 1.7vw;
+    letter-spacing: 4px;
+    line-height: 2.7vw;
+    text-align: justify;
+}
+
+
+
+
+/* CONTACT */
+
+
+
+#sectionContact{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 62%;
+    width: 100%;
+}
+
+form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+input{
+    width: 65%;
+    height: 50%;
+    padding: 2% 1%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+
+#document{
+    height: 100%;
+}
+
+input:focus-visible{
+    outline: unset;
+}
+
+/* input:-webkit-autofill{
+    background-color: transparent;
+} */
+
+button{
+    position: relative;
+    background-color: transparent;
+    border: black 1px solid;
+    padding: 1% 3%;
+    border-radius: 12px;
+    margin-top: 5%;
+} 
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+/* Loading screen */
+
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: black;
+}
+
+.txtCitation{
+    color: white;
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+    border: 2px solid white;
+    padding: 0 8px 0 15px;
+}
+
+.endLoad{
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.transitionText{
+    position: relative;
+}
+
+.transitionText:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    animation: disparitionText 1s linear;
+}
+
+
+@keyframes disparitionText {
+    from{
+        width: 0;
+    } 
+    100%{
+        width: 100%;
+    }
+}
+
+.percent{
+    position: absolute;
+    text-align: center;
+    width: 6vw;
+    height: 6vw;
+    top: 50%;
+    left: 21%;
+    transform: translateY(-50%);
+
+    font-family: azo-sans-uber, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: rgb(0, 0, 0);
+    font-size: 3.5vw;
+    letter-spacing: 0.93vw;
+    line-height: 6.2vw;
+
+    background-color: transparent;
+}
