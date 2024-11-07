@@ -1,0 +1,7 @@
+# robots.txt for https://brevin-renaud.com
+User-agent: *
+Allow: /
+Allow: /en/
+
+# Sitemap
+Sitemap: https://brevin-renaud.com/sitemap.xml
