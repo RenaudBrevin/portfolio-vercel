@@ -1,3 +1,9 @@
 {
-    "cleanUrls": true
+    "cleanUrls": true,
+    "buildOutput": {
+        "404.html": {
+            "path": "404.html",
+            "type": "static"
+        }
+    }
 }
