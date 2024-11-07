@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/en",
+        "dest": "/en/index.html"
+      },
+      {
+        "src": "/en/(.*)",
+        "dest": "/en/$1"
+      }
+    ],
+    "cleanUrls": true
+  }

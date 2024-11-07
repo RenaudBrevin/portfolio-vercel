@@ -10,6 +10,10 @@
     cursor: none;
 }
 
+u{
+    text-decoration: underline;
+}
+
 body{
     overflow: hidden;
 }
