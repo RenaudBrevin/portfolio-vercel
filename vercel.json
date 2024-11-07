@@ -7,19 +7,5 @@
         "source": "/404",
         "destination": "/404.html"
       }
-    ],
-    "routes": [
-      {
-        "src": "/en",
-        "dest": "/en/index.html"
-      },
-      { 
-        "handle": "filesystem"
-      },
-      {
-        "src": "/(.*)",
-        "status": 404,
-        "dest": "/404.html"
-      }
     ]
   }
