@@ -1,4 +1,4 @@
-// // SNAP SCROLL
+// SNAP SCROLL
 
 const sections = [...document.querySelectorAll(".sectionAllContent > div")]
 
@@ -14,6 +14,7 @@ document.addEventListener('scroll', function(e){
 document.addEventListener('wheel', wheelListener);
 
 function wheelListener(e) {
+    console.dir(e)
     if((e.path.slice(-7)[0].id == sections.slice(-1)[0].id && e.deltaY > 0)
     ||
     (e.path.slice(-7)[0].id == sections[0].id && e.deltaY < 0)){
