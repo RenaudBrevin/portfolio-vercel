@@ -1,9 +1,25 @@
 {
+    "version": 2,
     "cleanUrls": true,
-    "buildOutput": {
-        "404.html": {
-            "path": "404.html",
-            "type": "static"
-        }
-    }
-}
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/404",
+        "destination": "/404.html"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/en",
+        "dest": "/en/index.html"
+      },
+      { 
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "status": 404,
+        "dest": "/404.html"
+      }
+    ]
+  }
